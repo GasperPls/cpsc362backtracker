@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator - BudgetWise</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="calculator.css">
+  </head>
+  <body>
+    <header>
+        <nav>
+          <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="planner.html">Planner</a></li>
+            <li><a href="calculator.html">Calculator</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+      <h2>Salary and Expenses Calculator</h2>
+      <div id="calculator">
+      <!-- Initial form -->
+      <form action=""
+            id="calculatorForm">
+        <label for="setBudget">Please enter your salary first, then enter an expense you wish to create and a percentage for it</label>
+        <br>
+        <label for="expenseName">Expense Name:</label><br>
+        <input type="text" id="expenseName" name="expenseName" placeholder="Enter Expense"><br>
+        <label for="expensePercentage">Expense Percent (1-100):</label><br>
+        <input type="number" id="expensePercentage" name="expensePercentage" placeholder="Percent"><br><br>
+      </form>
+    </div>
+    <button onclick="addCat()">Add Category</button>
+              <!-- <div id="expensesList"></div> --->
+              <div id="totalExpenses">Total Expenses: $0. Balance: $0
+              </div>
+            </form> 
+      </div>  
+    <script>
+    var current = 0;
+    function addCat() {
+      // Create a new form
+      var newForm = document.createElement("calculator");
+      newForm.id = "calculator-group";
+
+      // Add elements to the new form
+      var expenseLabel = document.createElement("label");
+      expenseLabel.setAttribute("for", "expenseName");
+      expenseLabel.textContent = "Expense Name:";
+      newForm.appendChild(expenseLabel);
+
+      var expenseInput = document.createElement("input");
+      expenseInput.type = "text";
+      expenseInput.id = "expenseName";
+      expenseInput.name = "expenseName";
+      newForm.appendChild(expenseInput);
+
+      var percentageLabel = document.createElement("label");
+      percentageLabel.setAttribute("for", "expensePercentage");
+      percentageLabel.textContent = "Expense Percent (1-100):";
+      newForm.appendChild(percentageLabel);
+
+      var percentageInput = document.createElement("input");
+      percentageInput.type = "number";
+      percentageInput.id = "expensePercentage";
+      percentageInput.name = "expensePercentage";
+      newForm.appendChild(percentageInput);
+
+      if (current <= 9) {
+        // Append the new form to the container
+        document.getElementById("calculator").appendChild(newForm);
+        current++;
+      } else {
+        alert("Categories limit reached! Cannot proceed.");
+      }  
+    }
+    </script>
+  </body>
+</html>

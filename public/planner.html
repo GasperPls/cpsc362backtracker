@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Planner - BudgetWise</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="planner.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="planner.html">Planner</a></li>
+          <li><a href="calculator.html">Calculator</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="container">
+      <section class="note-section">
+        <h2>Notes</h2>
+        <input type="text" placeholder="Write a note..."></input>
+        <button onclick="addNote()">Add Note</button>
+        <ul id="notesList"></ul>
+      </section>
+      <section class="task-section">
+        <h2>Tasks</h2>
+        <input type="text" id="taskInput" placeholder="Create a new task..." />
+        <button onclick="addTask()">Add Task</button>
+        <ul id="tasksList"></ul>
+      </section>
+      <section class="goal-section">
+        <h2>Goals</h2>
+        <input type="text" id="goalInput" placeholder="Set a new goal..." />
+        <button onclick="addGoal()">Add Goal</button>
+        <ul id="goalsList"></ul>
+      </section>
+    </div>
+  </body>
+</html>
