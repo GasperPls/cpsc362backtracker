@@ -6,11 +6,11 @@ body {
 	font-family: sans-serif;
 	line-height: 1.5;
 	min-height: 100vh;
-	background: rgb(88, 155, 88);
 	flex-direction: column;
 	margin: 0;
+	background-image: url(images/Home-Background.jpg);
+	background-size: cover;
 }
-
 .main {
 	background-color: white;
 	border-radius: 15px;
@@ -20,9 +20,12 @@ body {
 	width: 500px;
 	text-align: center;
 }
-
 h1 {
 	color: black;
+	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+p {
+	font-weight: bold;
 }
 
 label {
@@ -31,7 +34,7 @@ label {
 	margin-top: 10px;
 	margin-bottom: 5px;
 	text-align: left;
-	color: gray;
+	color: black;
 	font-weight: bold;
 }
 
@@ -48,16 +51,96 @@ input {
 
 button {
 	padding: 15px;
-	border-radius: 10px;
+	border-radius: 15px;
 	margin-top: 15px;
 	margin-bottom: 15px;
 	border: none;
-	color: black
-	;
+	color: black;
 	cursor: pointer;
 	background-color: pink;
 	width: 100%;
-	font-size: 16px;
+	font-size: 1em;
+	transition: 1s;
+}
+button:hover{
+	background-color: rgb(200, 117, 131);
+}
+.button {
+	font-size: 1em;
+	padding: 10px;
+	color: black;
+	border-radius: 20px/50px;
+	text-decoration: none;
+	cursor: pointer;
+	border: 1px solid transparent;
+	width: 100%;
+}
+.box {
+	padding: 15px;
+	border-radius: 15px;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	color: black;
+	cursor: pointer;
+	background-color: pink;
+	width: 90%;
+	font-size: 15px;
+	transition: 1s;
+  }
+.box:hover {
+	background-color: rgb(200, 117, 131);
+}
+section{
+    background-color: white;
+	width: 300px;
+	height: 450px;
+	padding: 20px;
+}
+  
+header{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: white;
+	padding: 10px 0;
+	text-align: cetnter;
+	height: 60px;
+	border-bottom: 5px solid #333;
+	letter-spacing: 2px;
+	word-spacing: 50px;
+
+}
+header img{
+	width: 100px;
+	height: 60px;
+	object-fit: contain;
+	position: absolute;
+	margin-left: 20px;
+}
+header nav ul{
+	list-style-type: none;
+	padding: 0;
+	text-align: center;
+}
+header nav ul li{
+	display: inline-block;
+	margin: 0 15px;
+}
+header nav ul li a{
+	display: block;
+	text-decoration: none;
+	color: black;
+}
+footer{
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	background-color: #333;
+	padding: 10px 0;
+	color: white;
+	text-align: center;
 }
 
 .wrap {
@@ -65,35 +148,6 @@ button {
 	justify-content: center;
 	align-items: center;
 }
-
-.box {
-	padding: 15px;
-	border-radius: 10px;
-	margin-top: 15px;
-	margin-bottom: 15px;
-	border: none;
-	color: black
-	;
-	cursor: pointer;
-	background-color: pink;
-	width: 90%;
-	font-size: 16px;
-  }
-  
-.button {
-	font-size: 1em;
-	padding: 10px;
-	color: #fff;
-	border: 2px solid #06D85F;
-	border-radius: 20px/50px;
-	text-decoration: none;
-	cursor: pointer;
-	transition: all 0.3s ease-out;
-}
-.button:hover {
-	background: pink;
-}
-  
 .overlay {
 	position: fixed;
 	top: 0;
@@ -136,7 +190,7 @@ button {
 	color: #333;
 }
 .popup .close:hover {
-	color: #06D85F;
+	color: red;
 }
 .popup .content {
 	max-height: 30%;

@@ -42,10 +42,6 @@ nav ul li a {
     text-align: center;
 }
 
-section {
-    background-image: url("images/Home-Background.jpg");
-}
-
 footer {
     background-color: darkgray;
     color: white;
