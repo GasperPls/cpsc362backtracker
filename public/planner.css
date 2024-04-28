@@ -1,4 +1,3 @@
-
 body, html {
     margin: 0;
     padding: 0;
@@ -18,14 +17,15 @@ body, html {
 }
 
 section {
-    margin-bottom: 20px;
+    background-color: white;
 }
 
 h2 {
     margin-bottom: 10px;
 }
 
-input[type="text"], textarea {
+.form-group input[type="text"], 
+.form-group textarea {
     width: 300px;
     padding: 10px;
     margin-bottom: 10px;
