@@ -4,6 +4,14 @@ body, html {
     font-family: Arial, sans-serif;
 }
 
+nav {
+    padding: 10px 20px;
+}
+
+section{
+    background-color: white;
+}
+
 .container {
     display: flex;
     justify-content: center;
