@@ -18,13 +18,21 @@
           </ul>
         </nav>
       </header>
-    <section class="form-group">
+      <section id="incomeSection" class="monthly-section">
+        <h2>Please enter a monthly income</h2>
+        <div id="incomeForm">
+          <label for="monthlyIncome">Monthly Income:</label><br>
+          <input type="number" id="monthlyIncome" name="monthlyIncome" placeholder="Enter Monthly Income"><br><br>
+          <button onclick="showCalculatorSection()">Continue</button>
+        </div>
+      </section>
+    <section id="calculatorSection" class="form-group" style="display: none";>
       <h2>Salary and Expenses Calculator</h2>
       <div id="calculator">
       <!-- Initial form -->
       <form action=""
             id="calculatorForm">
-        <label for="setBudget">Please enter your salary first, then enter an expense you wish to create and a percentage for it</label>
+        <label for="setBudget">Enter an expense you wish to create and a percentage for it</label>
         <br>
         <label for="expenseName">Expense Name:</label><br>
         <input type="text" id="expenseName" name="expenseName" placeholder="Enter Expense"><br>
@@ -33,6 +41,7 @@
       </form>
     </div>
     <button onclick="addCat()">Add Category</button>
+    <button onclick="showIncomeSection()">Change monthly income</button>
               <!-- <div id="expensesList"></div> --->
               <div id="totalExpenses">Total Expenses: $0. Balance: $0
               </div>
@@ -78,5 +87,17 @@
       }  
     }
     </script>
+    <script>
+        function showCalculatorSection() {
+          document.getElementById("incomeSection").style.display = "none";
+          document.getElementById("calculatorSection").style.display = "block";
+        }
+    </script>
+     <script>
+      function showIncomeSection() {
+        document.getElementById("incomeSection").style.display = "block";
+        document.getElementById("calculatorSection").style.display = "none";
+      }
+  </script>
   </body>
 </html>
