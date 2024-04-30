@@ -21,7 +21,6 @@
     <main>
       <section class="welcome">
         <h1>Welcome to BudgetWise</h1>
-        <h2>Testing!!!></h2>
         <p>Plan smart, spend smarter.</p>
       
       <form action=""
@@ -30,15 +29,13 @@
               Email:
         </label>
         <input type="text"
-               id="email"
-               name="email"
+               id="loginEmail"
                placeholder="Enter your email" required>
         <label for="password">
               Password:
         </label>
         <input type="password"
-               id="password"
-               name="password"
+               id="loginPassword"
                placeholder="Enter your password" required>
         <div class="wrap">
           <button type="submit">
@@ -50,38 +47,33 @@
         <a class="button" href="#popup1">Not registered? Create an account!</a>
       </div>
     </section>
-      <div id="popup1" class="overlay">
-        <div class="popup">
-          <h2>Registration</h2>
-          <a class="close" href="#">&times;</a>
-          <div class="content">
-                <form action=""
-                      id="regForm">
-                    <label for="regEmail">Email:</label>
-                    <input
-                        type="regEmail"
-                        id="regEmail"
-                        name="regEmail"
-                        required/>
-                    <label for="regPassword">Password:</label>
-                    <input type="regPassword"
-                           id="regPassword"
-                           name="regPassword"
-                           pattern="^(?=.*\d)(?=.*[a-zA-Z])(?=.*[^a-zA-Z0-9])\S{8,}$"
-                           title="Password must contain at least one number, 
-                            one alphabet, one symbol, and be at 
-                            least 8 characters long"
-                        required/>
-                    <label for="regRepassword">Re-type Password:</label>
-                    <input
-                        type="regRepassword"
-                        id="regRepassword"
-                        name="regRepassword"
-                        required/>
-                    <button type="submit">
-                        Register
-                    </button>
-                </form>
+    <div id="popup1" class="overlay">
+      <div class="popup">
+        <h2>Registration</h2>
+        <a class="close" href="#">&times;</a>
+        <div class="content">
+            <form action=""
+                  id="regForm">
+            <label for="regEmail">Email:</label>
+            <input
+                    type="regEmail"
+                    id="regEmail"
+                    required/>
+            <label for="regPassword">Password:</label>
+            <input type="password"
+                    id="regPassword"
+                    pattern="^(?=.*\d)(?=.*[a-zA-Z])(?=.*[^a-zA-Z0-9])\S{8,}$"
+                    title="Password must contain at least one number, 
+                          one alphabet, one symbol, and be at 
+                          least 8 characters long"
+                    required/>
+            <label for="regRepassword">Re-type Password:</label>
+            <input
+                    type="password"
+                    id="regRepassword"
+                    required/>
+            <button type="submit"> Register </button>
+            </form>
           </div>
         </div>
       </div> 
