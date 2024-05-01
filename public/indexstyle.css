@@ -44,7 +44,7 @@ input {
 }
 
 button {
-	padding: 15px;
+	padding: 10px;
 	border-radius: 15px;
 	margin-top: 15px;
 	margin-bottom: 15px;
@@ -72,7 +72,7 @@ button:hover{
 	width: 100%;
 }
 .box {
-	padding: 15px;
+	padding: 10px;
 	border-radius: 15px;
 	margin-top: 15px;
 	margin-bottom: 15px;
@@ -91,7 +91,7 @@ button:hover{
 section{
     background-color: white;
 	width: 300px;
-	height: 450px;
+	height: 475px;
 	padding: 20px;
 }  
 header{

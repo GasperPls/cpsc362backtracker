@@ -20,27 +20,18 @@ const firebaseConfig = {
   databaseURL: "https://backtracker-4018e.web.app/"
 };
 
-
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getFirestore();
-
-
-
-
-
-
-
-
-
 
 // THIS PRINTS ALL DOC.IDS IN THE COLLECTION
 const collRef = collection(db, "categories");
 collection(db, "categories")
 
 
-/*const qSnapshot = await getDocs(collRef);
+/*
+const qSnapshot = await getDocs(collRef);
 qSnapshot.forEach((doc) => {
   // doc.data() is never undefined for query doc snapshots
   console.log(doc.id, " => ", doc.data());
@@ -51,10 +42,6 @@ await setDoc(doc(db, 'categories'), {
   percent: document.getElementsByClassName('percent').value
 });
 */
-
-
-
-
 /*
 const categoriesRef = collection(db, 'categories');
 const docSnap = await getDocs(categoriesRef);
@@ -64,10 +51,6 @@ docSnap.forEach((doc) => {
   console.log(doc.data());
 });
 */
-
-
-
-
 /*
 if(docSnap.exists()) {
   console.log("Document data:", docSnap.data());
@@ -75,7 +58,6 @@ if(docSnap.exists()) {
   // docSnap.data() will be undefined in this case
   console.log("No such document!");
 }*/
-
 
 // Status tracker of user
 onAuthStateChanged(auth, (user) => {
@@ -85,7 +67,6 @@ onAuthStateChanged(auth, (user) => {
     console.log("user logged out");
   }
 });
-
 
 // Registration Form
 const register = document.querySelector('#regForm');
@@ -108,7 +89,6 @@ if(register) {
     });}
   });
 }
-
 
 // Login Form
 const loginForm = document.querySelector('#myForm');
@@ -136,7 +116,6 @@ if(loginForm) {
   });
 }
 
-
 // Logging out
 const logout = document.querySelector("#logout");
 if(logout) {
@@ -148,6 +127,13 @@ if(logout) {
     });
   });
 }
+
+// Function that alerts user to go to 'Contact' to send an inquiry about changing their password
+function alertUser() {
+  alert("Go to the contact us page and send us an inquiry about this!");
+}
+document.getElementById('resetPW').addEventListener('click', alertUser);
+
 
 /*
 var current = 1;          // Counter for number of active categories!
@@ -448,3 +434,8 @@ function addCat() {
   }  
 }
 */
+
+
+
+
+

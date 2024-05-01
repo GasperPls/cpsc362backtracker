@@ -2,57 +2,332 @@ body, html {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-}
-
-.container {
+  }
+  
+  .container {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 20px;
-
+  
     background-image: url('images/HomeCashBackground.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;  
     background-size: cover;
-}
-
-section {
+  
+    
+  }
+  
+  section {
     background-color: white;
-}
-
-h2 {
+  }
+  
+  h2 {
     margin-bottom: 10px;
-}
-
-.form-group input[type="text"], 
-.form-group textarea {
+  }
+  
+  .form-group {
+    max-width: 900px;
+    max-height: 900px;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    padding: 30px 50px;
+    color: black;
+    text-align: left;
+  }
+  
+  .form-group input[type="text"], 
+  .form-group textarea {
     width: 300px;
     padding: 10px;
     margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
-}
-
-button {
+  }
+  
+    /* Clear floats after the header */
+    .taskHeader:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    
+  
+  button {
     padding: 10px 20px;
     background-color: #007bff;
     color: white;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-}
-
-button:hover {
+  }
+  
+  button:hover {
     background-color: #0056b3;
-}
-
-ul {
-    list-style-type: none;
+  }
+  
+  
+  /* Basic Reset */
+  * {
+    margin: 0;
     padding: 0;
-}
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    
+    background-image: url('images/HomeCashBackground.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;  
+    background-size: cover;
+  }
+  
+  header {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  nav #myNavBar {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+  }
+  
+  nav #myNavBar li {
+    padding: 0 20px;
+  }
+  
+  nav #myNavBar li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  footer {
+    background-color: darkgray;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+  }
+  
+  
+  /* Include the padding and border in an element's total width and height */
+  * {
+      box-sizing: border-box;
+    }
+    
+    /* Remove margins and padding from the list */
+    #myUL {
+      margin: 0;
+      padding: 0;
+    }
+    
+    /* Style the list items */
+    #myUL li {
+      list-style: none;
+      cursor: pointer;
+      position: relative;
+      padding: 12px 8px 12px 40px;
+      background: #eee;
+      font-size: 18px;
+      transition: 0.2s;
+    
+      /* make the list items unselectable */
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+    
+    /* Set all odd list items to a different color (zebra-stripes) */
+    #myUL li:nth-child(odd) {
+      background: #f9f9f9;
+    }
+    
+    /* Darker background-color on hover */
+    #myUL li:hover {
+      background: #ddd;
+    }
+    
+    /* When clicked on, add a background color and strike out text */
+    #myUL li.checked {
+      background: #888;
+      color: #fff;
+      text-decoration: line-through;
+    }
+    
+    /* Add a "checked" mark when clicked on */
+    #myUL li.checked::before {
+      content: '';
+      position: absolute;
+      border-color: #fff;
+      border-style: solid;
+      border-width: 0 2px 2px 0;
+      top: 10px;
+      left: 16px;
+      transform: rotate(45deg);
+      height: 15px;
+      width: 7px;
+    }
+    
+    /* Style the close button */
+    .close {
+      position: absolute;
+      right: 0;
+      top: 0;
+      padding: 12px 16px 12px 16px;
+    }
+    
+    .close:hover {
+      background-color: #f44336;
+      color: white;
+    }
+    
+  
+    /* Style the input */
+    #myInput {
+      width: 300px;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;  width: 300px;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    
+    /* Style the "Add" button */
+    .addBtn {
+      padding: 10px 20px;
+      width: 25%;
+      background: #007bff;
+      color: white;
+      text-align: center;
+      font-size: 13px;
+      cursor: pointer;
+      transition: 0.3s;
+      border-radius: 4px;
+    }
+    
+    .addBtn:hover {
+      background-color: #0056b3;
+    }
+  
 
-li {
-    margin-bottom: 10px;
-    padding: 10px;
-    border-radius: 4px;
-}
+
+
+
+
+    /*********/
+
+
+
+     /* Include the padding and border in an element's total width and height */
+  * {
+      box-sizing: border-box;
+    }
+    
+    /* Remove margins and padding from the list */
+    #otrUL {
+      margin: 0;
+      padding: 0;
+    }
+    
+    /* Style the list items */
+    #otrUL li {
+      list-style: none;
+      cursor: pointer;
+      position: relative;
+      padding: 12px 8px 12px 40px;
+      background: #eee;
+      font-size: 18px;
+      transition: 0.2s;
+    
+      /* make the list items unselectable */
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+    
+    /* Set all odd list items to a different color (zebra-stripes) */
+    #otrUL li:nth-child(odd) {
+      background: #f9f9f9;
+    }
+    
+    /* Darker background-color on hover */
+    #otrUL li:hover {
+      background: #ddd;
+    }
+    
+    /* When clicked on, add a background color and strike out text */
+    #otrUL li.checked {
+      background: #888;
+      color: #fff;
+      text-decoration: line-through;
+    }
+    
+    /* Add a "checked" mark when clicked on */
+    #otrUL li.checked::before {
+      content: '';
+      position: absolute;
+      border-color: #fff;
+      border-style: solid;
+      border-width: 0 2px 2px 0;
+      top: 10px;
+      left: 16px;
+      transform: rotate(45deg);
+      height: 15px;
+      width: 7px;
+    }
+    
+    /* Style the close button 
+    .close {
+      position: absolute;
+      right: 0;
+      top: 0;
+      padding: 12px 16px 12px 16px;
+    }
+    
+    .close:hover {
+      background-color: #f44336;
+      color: white;
+    }
+    */
+  
+    /* Style the input */
+    #noteInput {
+      width: 300px;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;  width: 300px;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    
+    /* Style the "Add" button */
+    .addBtn {
+      padding: 10px 20px;
+      width: 25%;
+      background: #007bff;
+      color: white;
+      text-align: center;
+      font-size: 13px;
+      cursor: pointer;
+      transition: 0.3s;
+      border-radius: 4px;
+    }
+    
+    .addBtn:hover {
+      background-color: #0056b3;
+    }
+  
