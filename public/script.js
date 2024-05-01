@@ -85,7 +85,7 @@ if(register) {
       // Create user!
       createUserWithEmailAndPassword(auth, email, password).then(cred => {
         regForm.reset();
-        location.href = "/home.html"
+        location.href = "/planner.html"
     });}
   });
 }
@@ -107,7 +107,7 @@ if(loginForm) {
     signInWithEmailAndPassword(auth, email, password).then(cred => {
       //Reset Form and then send the user to Home
       loginForm.reset();
-      location.href = "/home.html";
+      location.href = "/planner.html";
     })
     .catch((error) => {
       loginForm.reset();
