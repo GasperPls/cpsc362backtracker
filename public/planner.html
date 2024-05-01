@@ -20,115 +20,65 @@
     </header>
     <div class="container">
       <section class="form-group">
-        <div class="noteHeader">
-          <h2>Notes</h2>
-          <input type="text" id="noteInput" placeholder="Write a note..."></input>
-          <span id="addNoteBtn" class="addBtn">Add Note</span>
-          <div id="notesList"></div>
-        </div>
         <div class="taskHeader">
           <h2>Tasks</h2>
           <input type="text" id="myInput" placeholder="Title...">
           <span onclick="newElement()" class="addBtn">Add Task</span>
         </div>
-      <ul id="otrUL"></ul>
       <ul id="myUL"></ul>
-
       </section>
     </div>  
 
+    <script>
+      //////////////////////   CODE FOR TASKS   //////////////////////
+      // Create a "close" button and append it to each list item
+      var myNodelist = document.getElementById("myUL");
+      var i;
+      for (i = 0; i < myNodelist.length; i++) {
+        var span = document.createElement("SPAN");
+        var txt = document.createTextNode("\u00D7");
+        span.className = "close";
+        span.appendChild(txt);
+        myNodelist[i].appendChild(span);
+      }
+
+      // Click on a close button to hide the current list item
+      var close = document.getElementsByClassName("close");
+      var i;
+      for (i = 0; i < close.length; i++) {
+        close[i].onclick = function() {
+          var div = this.parentElement;
+          div.style.display = "none";
+        }
+      }
 
 
-<script>
-//////////////////////   CODE FOR NOTES   //////////////////////
-document.getElementById('addNoteBtn').addEventListener('click', function() {
-    var noteInput = document.getElementById('noteInput');
-    var note = noteInput.value.trim();
-    
-    if (note !== '') {
-        addNoteToList(note);
-        noteInput.value = ''; // Clear the input box after adding the note
-    } else {
-        alert('Please enter a note.');
-    }
-});
+      // Create a new list item when clicking on the "Add" button
+      function newElement() {
+        var li = document.createElement("li");
+        var inputValue = document.getElementById("myInput").value;
+        var t = document.createTextNode(inputValue);
+        li.appendChild(t);
+        if (inputValue === '') {
+          alert("You must write something!");
+        } else {
+          document.getElementById("myUL").appendChild(li);
+        }
+        document.getElementById("myInput").value = "";
 
-function addNoteToList(noteText) {
-  var li = document.createElement("li");
-  var inputValueNote = document.getElementById("noteInput").value;
-  var t = document.createTextNode(inputValue);
-  li.appendChild(t);
-  if (inputValueNote === '') {
-    alert("You must write something!");
-  } else {
-    document.getElementById("otrUL").appendChild(li);
-  }
-  document.getElementById("noteInput").value = "";
+        var span = document.createElement("SPAN");
+        var txt = document.createTextNode("\u00D7");
+        span.className = "close";
+        span.appendChild(txt);
+        li.appendChild(span);
 
-  var span = document.createElement("SPAN");
-  var txt = document.createTextNode("\u00D7");
-  span.className = "close";
-  span.appendChild(txt);
-  li.appendChild(span);
+        for (i = 0; i < close.length; i++) {
+          close[i].onclick = function() {
+            var div = this.parentElement;
+            div.style.display = "none";
+          }
+        }
+      }
+    </script>
 
-  for (i = 0; i < close.length; i++) {
-    close[i].onclick = function() {
-      var div = this.parentElement;
-      div.style.display = "none";
-    }
-  }
-}
-
-
-
-
-//////////////////////   CODE FOR TASKS   //////////////////////
-  // Create a "close" button and append it to each list item
-var myNodelist = document.getElementById("myUL");
-var i;
-for (i = 0; i < myNodelist.length; i++) {
-  var span = document.createElement("SPAN");
-  var txt = document.createTextNode("\u00D7");
-  span.className = "close";
-  span.appendChild(txt);
-  myNodelist[i].appendChild(span);
-}
-
-// Click on a close button to hide the current list item
-var close = document.getElementsByClassName("close");
-var i;
-for (i = 0; i < close.length; i++) {
-  close[i].onclick = function() {
-    var div = this.parentElement;
-    div.style.display = "none";
-  }
-}
-
-
-// Create a new list item when clicking on the "Add" button
-function newElement() {
-  var li = document.createElement("li");
-  var inputValueTask = document.getElementById("myInput").value;
-  var t = document.createTextNode(inputValueTask);
-  li.appendChild(t);
-  if (inputValue === '') {
-    alert("You must write something!");
-  } else {
-    document.getElementById("myUL").appendChild(li);
-  }
-  document.getElementById("myInput").value = "";
-
-  var span = document.createElement("SPAN");
-  var txt = document.createTextNode("\u00D7");
-  span.className = "close";
-  span.appendChild(txt);
-  li.appendChild(span);
-
-  for (i = 0; i < close.length; i++) {
-    close[i].onclick = function() {
-      var div = this.parentElement;
-      div.style.display = "none";
-    }
-  }
-}
-</script>
+</html>
