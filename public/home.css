@@ -42,6 +42,7 @@ nav ul li a {
     margin: auto;
     padding: 20px;
     line-height: 2;
+    background-color: whitesmoke;
 }
 
 footer p {
